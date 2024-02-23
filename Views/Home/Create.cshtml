@@ -1,0 +1,44 @@
+﻿ @model RoleBasesAuthorization.Models.User
+
+
+<h1>Add User</h1>
+<form method="post" action="Create"  class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="Id">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="Name">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="Email">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Salary</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="salary">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Date of birth</label>
+        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="DateOfBirth">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" id="dropdown" aria-describedby="emailHelp" asp-for="Department">
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+

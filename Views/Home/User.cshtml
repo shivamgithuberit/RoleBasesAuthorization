@@ -1,0 +1,73 @@
+﻿@model IEnumerable<RoleBasesAuthorization.Models.User>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Add these scripts to your _Layout.cshtml file -->
+	<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+	<script src="https://cdn.ag-grid.com/ag-grid/latest/ag-grid.min.js"></script>
+	<script src="https://cdn.ag-grid.com/ag-grid/latest/ag-grid-enterprise.min.js/dist/ag-grid-community.min.noStyle.js"></script>
+
+
+
+
+</head>
+<body>
+	
+	<div id="grid" style="height: 500px; width: 100%;" class="ag-theme-alpine"></div>
+
+
+	<script>
+		// JavaScript code to configure and populate the AG-Grid
+
+		var gridOptions = {
+			columnDefs: [
+				{ headerName: 'Id', field: 'id', },
+				{ headerName: 'Name', field: 'name' },
+				{ headerName: 'Email', field: 'email' },
+				{ headerName: 'Salary', field: 'salary' },
+				{ headerName: 'DateOfBirth', field: 'dateOfBirth' },
+				{ headerName: 'Departments', field: 'department' },
+				// {
+				// 	headerName: 'Actions',
+				// 	cellRenderer: function (params) {
+				// 		return `<button class="btn-delete" onclick="deleteItem(${params.data.id})">Delete</button>`;
+				// 	},
+				// 	editable: false,
+				// },
+			],
+
+
+			defaultColDef: {
+				sortable: true,
+				filter: true,
+				resizable: true,
+				width: 250,
+				editable: true,
+				cellDataType: false,
+				suppressMenu: true,
+				suppressColumnsToolPanel: true,
+			},
+			rowHeight: 40,
+			pagination: true,
+
+			paginationPageSize: 15,
+			rowData: @Html.Raw(Json.Serialize(Model)),
+
+			
+		};
+
+
+		
+
+		
+
+		// Initialize AG-Grid
+		var gridDiv = document.querySelector("#grid");
+		new agGrid.Grid(gridDiv, gridOptions);
+	</script>
+
+
+
+</body>
+</html>

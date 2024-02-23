@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu {
+            float: left;
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .content {
+            float: left;
+            width: 80%;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            .menu ul li {
+                margin-bottom: 10px;
+            }
+
+                .menu ul li a {
+                    text-decoration: none;
+                    color: #333;
+                }
+
+                    .menu ul li a:hover {
+                        color: #007bff;
+                    }
+
+        .content h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the Dashboard</h1>
+    </div>
+    <div class="container">
+        <div class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Dashboard Content</h2>
+            <p>Welcome to the dashboard! This is where you can view various reports and manage your settings.</p>
+        </div>
+    </div>
+</body>
+</html>
